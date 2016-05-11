@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="main.css" type="text/css" />
+        <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
+        <title>Magellan's Voyage</title>
+        <style type="text/css">
+            img{
+                width: 50%;
+                height: 500px;
+                margin-top:2%;
+                margin-left: 26%;
+                padding:4px;
+                border: rgba(255, 255, 255, 0);
+                background-color: rgba(255, 255, 255, 0);
+                
+            }
+        </style>
+    </head>
+    <body class="container">
+        <h1>Lost?</h1>
+        <img src = "http://img03.deviantart.net/003e/i/2015/051/3/b/compass_png_by_lg_design-d8ir90s.png">
+        <p>During Magellan's Voyage he did not travel to the town of <span id="lostcity"></span></p>
+        <div class="btn2">
+            <a href="index"><button type="button" class= "btn btn-default btn-lg">Return to Map</button></a>
+        </div>
+        <script type="text/javascript">
+            var city = window.location.pathname.substr(1)
+            console.log(city)
+            function lostcityFunc() {
+                document.getElementById("lostcity").innerHTML = city;
+            }
+            lostcityFunc()
+        </script>
+    </body>
+</html>
